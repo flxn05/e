@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+body {
+  background-color: black;
+  background-image: linear-gradient(90deg, rgb(12, 0, 0), rgb(0, 0, 12));
+  color: white;
+  font-size: 6rem;
+  text-align: center;
+  padding-block: 12vh;
+}
+
+    .lyrics p {
+  font-family: Arial, Helvetica, sans-serif;
+  opacity: 0;
+  transition: opacity 1s ease;
+  animation: fadeIn 5s forwards;
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  75% {opacity: 1; font-size: 6rem;}
+  100% {opacity: .25; font-size: .1rem;}
+}
+
+/* Set animation delays for each line based on timecodes */
+#line-0 { animation-delay: 0.33s; }
+#line-1 { animation-delay: 1.82s; }
+#line-2 { animation-delay: 4.64s; }
+#line-3 { animation-delay: 9.61s; }
+#line-4 { animation-delay: 12.20s; }
+#line-5 { animation-delay: 16.16s; }
+#line-6 { animation-delay: 23.51s; }
+#line-7 { animation-delay: 26.16s; }
+#line-8 { animation-delay: 31.62s; }
+#line-9 { animation-delay: 34.27s; }
+#line-10 { animation-delay: 38.03s; }
+#line-11 { animation-delay: 40.79s; }
+#line-12 { animation-delay: 44.58s; }
+#line-13 { animation-delay: 48.47s; }
+#line-14 { animation-delay: 50.35s; }
+#line-15 { animation-delay: 52.50s; }
+#line-16 { animation-delay: 54.63s; }
+#line-17 { animation-delay: 55.84s; }
+#line-18 { animation-delay: 58.96s; }
+#line-19 { animation-delay: 62.19s; }
+#line-20 { animation-delay: 65.00s; }
+#line-21 { animation-delay: 66.89s; }
+
+#line-22 { animation-delay: 73.00s; }
+#line-23 { animation-delay: 75.00s; }
+#line-24 { animation-delay: 78.00s; }
+#line-25 { animation-delay: 82.00s; }
+
+#line-26 { animation-delay: 102.59s; }
+#line-27 { animation-delay: 106.33s; }
+#line-28 { animation-delay: 110.20s; }
+#line-29 { animation-delay: 112.26s; }
+#line-30 { animation-delay: 114.09s; }
+#line-31 { animation-delay: 116.87s; }
+#line-32 { animation-delay: 118.09s; }
+#line-33 { animation-delay: 120.44s; }
+#line-34 { animation-delay: 123.70s; }
+#line-35 { animation-delay: 125.81s; }
+#line-36 { animation-delay: 128.50s; }
+#line-37 { animation-delay: 133.62s; }
+#line-38 { animation-delay: 136.63s; }
+#line-39 { animation-delay: 141.60s; }
+#line-40 { animation-delay: 144.24s; }
+#line-41 { animation-delay: 147.65s; }
+#line-42 { animation-delay: 149.70s; }
+#line-43 { animation-delay: 155.32s; }
+#line-44 { animation-delay: 157.52s; }
+#line-45 { animation-delay: 163.16s; }
+#line-46 { animation-delay: 164.42s; }
+#line-47 { animation-delay: 167.26s; }
+#line-48 { animation-delay: 181.10s; }
+#line-49 { animation-delay: 185.19s; }
+#line-50 { animation-delay: 188.05s; }
+#line-51 { animation-delay: 191.98s; }
+#line-52 { animation-delay: 195.59s; }
+#line-53 { animation-delay: 199.85s; }
+#line-54 { animation-delay: 201.84s; }
+#line-55 { animation-delay: 203.24s; }
+#line-56 { animation-delay: 205.84s; }
+#line-57 { animation-delay: 209.64s; }
+#line-58 { animation-delay: 210.78s; }
+#line-59 { animation-delay: 213.74s; }
+#line-60 { animation-delay: 217.51s; }
+#line-61 { animation-delay: 219.07s; }
+#line-62 { animation-delay: 221.93s; }
+#line-63 { animation-delay: 226.82s; }
+#line-64 { animation-delay: 229.44s; }
+#line-65 { animation-delay: 232.96s; }
+#line-66 { animation-delay: 234.27s; }
+#line-67 { animation-delay: 236.79s; }
+#line-68 { animation-delay: 240.00s; }
+#line-69 { animation-delay: 241.79s; }
+#line-70 { animation-delay: 243.79s; }
+#line-71 { animation-delay: 245.79s; }
+#line-72 { animation-delay: 248.79s; }
+#line-73 { animation-delay: 250.79s; }
+#line-74 { animation-delay: 253.79s; }
+#line-75 { animation-delay: 255.79s; }
+#line-76 { animation-delay: 257.79s; }
+#line-77 { animation-delay: 261.50s; animation-duration: 7.5s; }
+
+.animated-div {
+  height: 1rem;
+  border-radius: 1rem;
+  background-color: white; /* Change the color */
+  animation: widthGrow 270s ease-out forwards;
+  position: fixed;
+  bottom: 1rem;
+  left: 2rem;
+  right: 1rem;
+}
+
+@keyframes widthGrow {
+  from {
+    width: 0;
+  }
+  to {
+    width: calc(100vw - 12rem);
+  }
+}
+
+.timer {
+  font-size: 2rem;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  width: 100px;
+  margin: 0 auto;
+  border-radius: 10px;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+  </style>
+</head>
+<body>
+  <div class="lyrics">
+    <p id="line-0">What is love?</p>
+    <p id="line-1">Oh, baby, don't hurt me</p>
+    <p id="line-2">Don't hurt me no more</p>
+    <p id="line-3">Baby, don't hurt me</p>
+    <p id="line-4">Don't hurt me no more</p>
+    <p id="line-5"></p>
+    <p id="line-6">What is love?</p>
+    <p id="line-7"></p>
+    <p id="line-8"><i>Yeah, yeah</i></p>
+    <p id="line-9"></p>
+    <p id="line-10"><i>(Ooh, ooh)</i></p>
+    <p id="line-11">I don't know why you're not there</p>
+    <p id="line-12">I give you my love, but you don't care</p>
+    <p id="line-13" style="color: lightgreen;">So what is right?</p>
+    <p id="line-14" style="color: lightsalmon;">And what is wrong?</p>
+    <p id="line-15">Gimme a sign</p>
+    <p id="line-16"><b>What is love?</b></p>
+    <p id="line-17"><b>Oh, baby, don't hurt me</b></p>
+    <p id="line-18"><b>Don't hurt me no more</b></p>
+    <p id="line-19"><b>What is love?</b></p>
+    <p id="line-20"><b>Oh, baby, don't hurt me</b></p>
+    <p id="line-21"><b>Don't hurt me no more</b></p>
+    <p id="line-22"><i>Whoa, whoa, whoa, whoa</i></p>
+    <p id="line-23"><i>Oh-whoa, whoa, ohh, ooh</i></p>
+    <p id="line-24"><i>Whoa, whoa, whoa, whoa</i></p>
+    <p id="line-25"><i>Oh-whoa, whoa, ohh, ooh</i></p>
+    <p id="line-26">Oh, I don't know, what can I do?</p>
+    <p id="line-27">What else can I say, it's up to you</p>
+    <p id="line-28">I know we're one</p>
+    <p id="line-29">Just me and you</p>
+    <p id="line-30">I can't go on</p>
+    <p id="line-31"><b>What is love?</b></p>
+    <p id="line-32"><b>Oh, baby, don't hurt me</b></p>
+    <p id="line-33"><b>Don't hurt me no more</b></p>
+    <p id="line-34"><b>What is love?</b></p>
+    <p id="line-35"><b>Oh, baby, don't hurt me</b></p>
+    <p id="line-36"><b>Don't hurt me no more</b></p>
+    <p id="line-37"><i>Whoa, whoa, whoa, whoa</i></p>
+    <p id="line-38"><i>Oh-whoa, whoa, ohh, ooh</i></p>
+    <p id="line-39"><i>Whoa, whoa, whoa, whoa</i></p>
+    <p id="line-40"><i>Oh-whoa, whoa, ohh, ooh</i></p>
+    <p id="line-41">What is love?</p>
+    <p id="line-42">(Ooh, ooh, ooh)</p>
+    <p id="line-43">What is love?</p>
+    <p id="line-44">(Ooh, ooh, ooh)</p>
+    <p id="line-45"><b>What is love?</b></p>
+    <p id="line-46"><b>Oh, baby, don't hurt me</b></p>
+    <p id="line-47"><b>Don't hurt me no more</b></p>
+    <p id="line-48"><i>Don't hurt me</i></p>
+    <p id="line-49"><i>Don't hurt me</i></p>
+    <p id="line-50">I want no other, no other lover</p>
+    <p id="line-51">This is our life, our time</p>
+    <p id="line-52">When we are together, I need you forever</p>
+    <p id="line-53">Is it love?</p>
+    <p id="line-54"><b>What is love?</b></p>
+    <p id="line-55"><b>Oh, baby, don't hurt me</b></p>
+    <p id="line-56"><b>Don't hurt me no more</b></p>
+    <p id="line-57"><b>What is love?</b></p>
+    <p id="line-58"><b>Oh, baby, don't hurt me</b></p>
+    <p id="line-59"><b>Don't hurt me no more</b></p>
+    <p id="line-60"><i>Yeah, yeah</i></p>
+    <p id="line-61"><i>Whoa, whoa, whoa, whoa</i></p>
+    <p id="line-62"><i>Oh-whoa, whoa, ohh, ooh</i></p>
+    <p id="line-63"><i>Whoa, whoa, whoa, whoa</i></p>
+    <p id="line-64"><i>Oh-whoa, whoa, ohh, ooh</i></p>
+    <p id="line-65">What is love?</p>
+    <p id="line-66">Oh, baby, don't hurt me</p>
+    <p id="line-67">Don't hurt me no more</p>
+
+    <p id="line-68">What is love?</p>
+    <p id="line-69">Oh, baby, don't hurt me</p>
+    <p id="line-70">Don't hurt me no more</p>
+    <p id="line-71"><i>(Ooh, ooh)</i></p>
+    <p id="line-72">Oh baby, don't hurt me</p>
+    <p id="line-73">Don't hurt me no more</p>
+    <p id="line-74"><i>(Ooh, ooh)</i></p>
+    <p id="line-75">Oh baby, don't hurt me</p>
+    <p id="line-76">Don't hurt me no more</p>
+    <p id="line-77" style="transform: scale(2);"><b>What is love?</b></p>
+    
+  </div>
+  
+  
+  <div class="animated-div"></div>
+  <div class="timer" id="timer">0:00</div>
+  <audio src="whatIsLove.mp3" autoplay></audio>
+  <script>
+    const timerElement = document.getElementById('timer');
+let totalTime = 270; // Total time in seconds (4 minutes and 30 seconds)
+let currentTime = 0;
+
+function updateTimer() {
+  // Calculate minutes and seconds
+  let minutes = Math.floor(currentTime / 60);
+  let seconds = currentTime % 60;
+
+  // Format the time as MM:SS
+  let formattedTime = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+  timerElement.textContent = formattedTime;
+
+  // Increment the time
+  currentTime++;
+
+  // If the time reaches 270 seconds (4:30), stop the timer
+  if (currentTime > totalTime) {
+    clearInterval(timerInterval);
+  }
+}
+
+// Update the timer every second
+const timerInterval = setInterval(updateTimer, 1000);
+
+  </script>
+
+</body>
+</html>
